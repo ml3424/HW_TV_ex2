@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn;
     TextView tV;
+    int counter = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click(View view) {
-
+        counter ++;
+        tV.setTextSize(counter + 10);
+        tV.setText("This is a click number: " + counter);
     }
 }
